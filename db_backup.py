@@ -1,19 +1,18 @@
 # Author: Michael Borden
 # Date: Sun Dec 16, 2018
-# 
-# Purpose: Backup database with encryption and decription
+#
+# Purpose: Backup PostgreSQL Database with Encryption and Decription using GnuGP*
+#
+# *Note:
+#   --Must first create a private key with GnuGP
+#   : gpg[2] --gen-key
+#   -- Then follow instructions and remember what you put in as you will need it
 #
 # Example:
 #   -- Backup (Encript)
 #   : python3 db_backup.py -db databasename -u username@gmail.com -f/-d dumpname [-p num]
 #   -- Restore
 #   : python3 db_backup.py -r -db databasename -u username@gmail.com -f/-d dumpname [-p num]
-#
-# Note:
-#   --Must first create a private key with GnuGP
-#   : gpg[2] --gen-key
-#   -- Then follow instructions and remember what you put in as you will need it
-
 
 import os
 import sys
